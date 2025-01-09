@@ -7,6 +7,7 @@ import Main from "./pages/main";
 import Projects from "./pages/projects";
 import Experience from "./pages/experience";
 import ContactUs from "./pages/contact-us";
+import Footer from "./pages/footer";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Projects />
         <Experience />
         <ContactUs />
+        <Footer />
       </ThemeProvider>
     </ErrorBoundary>
   );
