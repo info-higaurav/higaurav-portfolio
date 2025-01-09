@@ -4,6 +4,7 @@ import ErrorBoundary from "@/components/ErrorBoundary"
 // components
 import Header from "./pages/header";
 import Main from "./pages/main";
+import Projects from "./pages/projects";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Header />
         <Main />
+        <Projects />
       </ThemeProvider>
     </ErrorBoundary>
   );
