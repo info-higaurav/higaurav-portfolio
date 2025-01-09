@@ -11,7 +11,7 @@ export default function Projects() {
       tech: ["React", "Node Js", "MongoDb", "Express Js"],
       github: "https://github.com/info-higaurav/project-management.git",
       demo: "https://projectflow-nu.vercel.app/",
-      image: "./assets/projects/test2.jpg"
+      image: "./assets/projects/projectflow.jpg"
     },
     {
       title: "The Prime Infra",
@@ -19,7 +19,7 @@ export default function Projects() {
       tech: ["React", "Node Js", "MongoDb", "Express Js"],
       github: "https://github.com/info-higaurav/theprimeinfra.git",
       demo: "https://theprimeinfra.vercel.app/",
-      image: "./assets/projects/test1.jpg"
+      image: "./assets/projects/theprimeinfra.jpg"
     }
   ];
 
@@ -53,9 +53,19 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen bg-background py-24 overflow-hidden">
+    <section id="projects" className="relative min-h-screen bg-gray-100 dark:bg-gray-900 py-24 overflow-hidden">
+      {/* Spotlight effects for dark mode */}
+      <div className="hidden dark:block">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -z-10" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] -z-10" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[140px] -z-10" />
+      </div>
+
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] dark:opacity-[0.02] opacity-[0.04]"></div>
+
       <motion.div 
-        className="max-w-[1400px] mx-auto px-6"
+        className="relative max-w-[1400px] mx-auto px-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -95,7 +105,7 @@ export default function Projects() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary/60 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-300 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                   <img 
                     src={project.image} 
                     alt={project.title}

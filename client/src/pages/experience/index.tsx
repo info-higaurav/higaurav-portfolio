@@ -22,8 +22,9 @@ export default function Experience() {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className=" bg-gradient-to-b from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
+    <section id="experience" className="relative overflow-hidden">
+      
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] dark:opacity-[0.02] opacity-[0.04]"></div>
       <div className="relative max-w-[1000px] mx-auto px-6 py-24">
         <motion.h2 
           className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent"
@@ -79,7 +80,7 @@ export default function Experience() {
 
                 {/* Right side - Content */}
                 <div className="md:w-2/3 md:pl-12">
-                  <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
+                  <Card className="bg-white/80 dark:bg-gray-900/50 backdrop-blur-md border border-gray-200 dark:border-gray-700 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
                     <CardHeader>
                       <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-100">{exp.role}</CardTitle>
                       <p className="text-gray-700 dark:text-gray-300">{exp.description}</p>

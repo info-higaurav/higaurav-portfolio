@@ -42,8 +42,9 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
+    <section id="contact" className="relative min-h-screen bg-gray-200 dark:bg-gray-900 overflow-hidden">
+
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] dark:opacity-[0.02] opacity-[0.04]"></div>
       <div className="relative max-w-2xl mx-auto px-6 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +65,7 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg">
+          <Card className="bg-white dark:bg-black/60 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-lg">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 export default function Main() {
   return (
-    <section id="home" className="min-h-[calc(100vh-5rem)] w-full bg-background relative"> 
+    <section id="home" className="min-h-screen w-full bg-background relative"> 
       {/* Hero Section */}
-      <section className="h-[calc(100vh-5rem)] w-full flex items-center justify-center px-6 relative z-10"> 
+      <section className="min-h-[90vh] w-full flex items-center justify-center px-6 relative z-10"> 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -32,10 +33,23 @@ export default function Main() {
             with modern technologies and best practices
           </motion.p>
         </motion.div>
+
+        {/* Scroll Down Indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ 
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <ChevronDown className="w-8 h-8 text-muted-foreground" />
+        </motion.div>
       </section>
 
       {/* Expertise Section */}
-      <section className="py-24 px-6 w-full relative z-10"> 
+      <section className="py-16 px-6 w-full relative z-10"> 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
